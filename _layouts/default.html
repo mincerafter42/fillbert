@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="{{"/main.css" | relative_url}}">
+<title>{% if layout.is_comic %}Fillbert comic for {{page.date|date:site.date_format}}{% else %}{{page.title}}{% endif %}</title>
+</head>
+<body>
+<header>
+<div><a href="{{site.url}}{{site.baseurl}}">{{site.title}}</a></div>
+{{site.description}}
+</header>
+<hr />
+<main>
+{{ content }}
+</main>
+<hr />
+<footer>Fillbert &copy; 2021 Vivi</footer>
+</body>
+</html>

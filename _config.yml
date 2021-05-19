@@ -1,0 +1,25 @@
+title: Fillbert
+description: "The Empty Space Cat"
+baseurl: "/fillbert"
+url: "https://mincerafter42.github.io"
+timezone: America/Vancouver
+
+markdown: kramdown
+
+permalink: "/:w_year/W:week/"
+
+date_format: "%G-W%V"
+
+defaults:
+ - 
+  scope:
+   path: ""
+   type: "pages"
+  values:
+   layout: "page"
+ - 
+  scope:
+   path: ""
+   type: "posts"
+  values:
+   layout: "comic"
