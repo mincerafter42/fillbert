@@ -1,8 +1,9 @@
+{% capture the_content %}
 <!doctype html>
 <html>
 <head>
 <link rel="stylesheet" href="{{"/main.css" | relative_url}}">
-<title>Fillbert | {% if layout.is_comic %}Comic for {{page.date|date:site.date_format}}{% else %}{{page.title}}{% endif %}</title>
+<title>Fillbert {% if layout.is_comic %}comic for {{page.date|date:site.date_format}}{% else %}| {{page.title}}{% endif %}</title>
 <script src="{{"/main.js"|relative_url}}"></script>
 </head>
 <body>
@@ -14,11 +15,12 @@
 <li><a href="{{"/about" | relative_url}}">About</a></li>
 </ul></nav>
 </header>
-<hr />
+<hr/>
 <main>
-{{content | normalize_whitespace}}
+{{content}}
 </main>
-<hr />
+<hr/>
 <footer>Fillbert &copy; 2021 Vivi</footer>
 </body>
 </html>
+{% endcapture %}{{the_content|normalize_whitespace|replace:"> <","><"}}
