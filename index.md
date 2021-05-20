@@ -1,7 +1,6 @@
 ---
 title: Home
 ---
-{% include obj link="/img/fillbert.svg" %}
-Welcome to the web site of Fillbert, the cat that fills empty space! As you can see, this is a very empty (and mostly lacking in CSS) website.
+[![A white spherical cat with a black tail]({{"/img/fillbert.svg"|relative_url}})]({{site.posts[0].url|relative_url}})
 
-Soon Fillbert (and me, the vector artist) will fill it with comics. At least 10 comics.
+Welcome to the web site of Fillbert, the cat that fills empty space! As you can see, this is a very empty (and mostly lacking in CSS) website; however, it is being slowly filled with comics. Click the Fillbert above to go to the latest comic.

@@ -3,7 +3,8 @@ layout: default
 is_comic: true
 ---
 <h1>Comic for {{ page.date | date: site.date_format }}</h1>
-<object data="{{ page.link }}"></object>
-<nav><a{% if page.previous %} href="{{site.posts[-1].url|relative_url}}"{%endif%}>First</a> <a{% if page.previous %} href="{{page.previous.url|relative_url}}"{%endif%}>Previous</a> <a{% if page.next %} href="{{page.next.url|relative_url}}"{%endif%}>Next</a> <a{% if page.next %} href="{{site.posts[0].url|relative_url}}"{% endif %}>Latest</a></nav>
-<h2 id="commentary">Commentary</h2>
-{% if content == "" %}<p>No commentary.</p>{% else %}{{ content }}{% endif %}
+<a{% if page.next %} href="{{page.next.url|relative_url}}"{%endif%}>
+{{content}}
+</a>
+<nav><ul><li><a{% if page.previous %} href="{{site.posts[-1].url|relative_url}}"{%endif%}>First</a></li><li><a{% if page.previous %} href="{{page.previous.url|relative_url}}"{%endif%}>Previous</a></li><li><button type="button" onclick='copy("{{page.url|absolute_url}}")'>Copy permalink</button></li><li><a{% if page.next %} href="{{page.next.url|relative_url}}"{%endif%}>Next</a></li><li><a{% if page.next %} href="{{site.posts[0].url|relative_url}}"{% endif %}>Latest</a></li></ul></nav>
+{% if page.commentary %}<h2 id="commentary">Commentary</h2>{{page.commentary | markdownify}}{% endif %}

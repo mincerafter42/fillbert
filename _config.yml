@@ -4,6 +4,8 @@ baseurl: "/fillbert"
 url: "https://mincerafter42.github.io"
 timezone: America/Vancouver
 
+future: true
+
 markdown: kramdown
 
 permalink: "/:w_year/W:week/"

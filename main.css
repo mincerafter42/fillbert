@@ -1,9 +1,27 @@
 @font-face {
-	font-family: "vivi";
-	src: url("vivi.woff");
+	font-family: "Vivi";
+	src: url("img/vivi.woff");
 }
 body {
 	text-align: center;
 	font-size: 14pt;
-	font-family: vivi;
+	font-family: Vivi;
+}
+svg {
+	max-width: 100%;
+	height: auto;
+}
+nav ul {padding: 0}
+nav li {
+	float: left;
+	display: inline;
+	margin: 0 .5em;
+}
+ul {
+	display: inline-block;
+	text-align: initial;
+	margin: 0;
+}
+ul ul {
+	display: block;
 }
