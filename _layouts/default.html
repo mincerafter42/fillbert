@@ -1,4 +1,6 @@
-{% capture the_content %}
+---
+layout: compressxml
+---
 <!doctype html>
 <html>
 <head>
@@ -23,4 +25,3 @@
 <footer>Fillbert &copy; 2021 Vivi</footer>
 </body>
 </html>
-{% endcapture %}{{the_content|normalize_whitespace|replace:"> <","><"}}
