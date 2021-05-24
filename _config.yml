@@ -6,8 +6,6 @@ timezone: America/Vancouver
 
 future: true
 
-permalink: "/:w_year/W:week/"
-
 date_format: "%G-W%V"
 
 defaults:
