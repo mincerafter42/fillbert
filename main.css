@@ -6,12 +6,19 @@ body {
 	text-align: center;
 	font-size: 14pt;
 	font-family: Vivi;
+	color: #000;
+	background-color: #fff;
 }
 svg {
 	max-width: 100%;
 	height: auto;
 }
-nav ul {padding: 0}
+nav ul {
+	padding: 9px 5px 5px;
+	background-color: #eee;
+	border: 2px #444 solid;
+	border-radius: 9px;
+}
 nav li {
 	float: left;
 	display: inline;
