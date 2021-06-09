@@ -32,3 +32,6 @@ ul {
 ul ul {
 	display: block;
 }
+@media print {
+	header, footer, hr, nav {display: none}
+}
