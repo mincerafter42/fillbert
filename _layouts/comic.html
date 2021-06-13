@@ -3,7 +3,7 @@ layout: default
 is_comic: true
 ---
 <h1>Comic for {{ page.date | date: site.date_format }}</h1>
-<a{% if page.next %} href="{{page.next.url|relative_url}}"{%endif%}>
+<a id="comic"{% if page.next %} href="{{page.next.url|relative_url}}"{%endif%}>
 {{content}}
 </a>
 <nav><ul><li><a{% if page.previous %} href="{{site.posts[-1].url|relative_url}}"{%endif%}>First</a></li><li><a{% if page.previous %} href="{{page.previous.url|relative_url}}"{%endif%}>Previous</a></li><li><noscript>Permalink: {{page.url|absolute_url}}</noscript><button class="yescript" type="button" onclick='copy("{{page.url|absolute_url}}")'>Copy permalink</button></li><li><a{% if page.next %} href="{{page.next.url|relative_url}}"{%endif%}>Next</a></li><li><a{% if page.next %} href="{{site.posts[0].url|relative_url}}"{% endif %}>Latest</a></li></ul></nav>

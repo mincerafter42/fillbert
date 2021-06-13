@@ -32,6 +32,10 @@ ul {
 ul ul {
 	display: block;
 }
+#comic {
+	text-decoration: none;
+	color: #000;
+}
 @media print {
 	header, footer, hr, nav {display: none}
 }
