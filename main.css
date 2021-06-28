@@ -6,8 +6,11 @@ body {
 	text-align: center;
 	font-size: 14pt;
 	font-family: Vivi;
-	color: #000;
-	background-color: #fff;
+	color: #fff;
+	background-color: #222;
+}
+a:any-link {
+	color: #ff0;
 }
 svg {
 	max-width: 100%;
@@ -15,8 +18,7 @@ svg {
 }
 nav ul {
 	padding: 9px 5px 5px;
-	background-color: #eee;
-	border: 2px #444 solid;
+	background-color: #444;
 	border-radius: 9px;
 }
 nav li {
@@ -34,8 +36,16 @@ ul ul {
 }
 #comic {
 	text-decoration: none;
+	background-color: #fff;
 	color: #000;
+	display: inline-block;
+	padding: 9px 9px 2px;
+	border-radius: 9px;
+	margin-bottom: 1em;
 }
 @media print {
 	header, footer, hr, nav {display: none}
+	body {color: #000; background-color: #fff}
+	#comic {padding: 0; margin: 0; break-inside: avoid}
+	a:any-link {color: #00f}
 }
