@@ -1,7 +1,7 @@
 ---
 title: About
 ---
-Fillbert is a webcomic created by [me, Vivi](https://mincerafter42.github.io).
+Fillbert is a webcomic created by [me, Vivi](https://mincerafter42.github.io). It should work with all major browsers _but not Internet Explorer. How is Internet Explorer still a thing; it's so incompatible with many Web technologies_
 
 The comics are drawn in [Inkscape](https://inkscape.org/), and hand-edited by me to reduce redundancy, mostly with the <abbr title="Scalable Vector Graphics">SVG</abbr>\ `<use>` element.  
 I have no clue what Inkscape's doing with coordinate spaces half the time.
