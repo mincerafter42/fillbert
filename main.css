@@ -43,6 +43,12 @@ ul ul {
 	border-radius: 9px;
 	margin-bottom: 1em;
 }
+.shos {
+	display: none;
+}
+.shos:target {
+	display: block;
+}
 @media print {
 	header, footer, hr, nav {display: none}
 	body {color: #000; background-color: #fff}
