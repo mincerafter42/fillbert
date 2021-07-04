@@ -49,9 +49,27 @@ ul ul {
 .shos:target {
 	display: block;
 }
+table {
+	border-collapse: collapse;
+	margin: 0 auto;
+}
+td {
+	border: 1px solid white;
+}
+td.monthInd {
+	background-color: #066;
+}
+thead.greg th {
+	min-width: 35px;
+}
+thead.greg th:first-child {
+	min-width: 200px;	
+}
 @media print {
 	header, footer, hr, nav {display: none}
 	body {color: #000; background-color: #fff}
 	#comic {padding: 0; margin: 0; break-inside: avoid}
 	a:any-link {color: #00f}
+	td {border-color: #000}
+	td.monthInd {background-color: #f99}
 }

@@ -1,1 +1,0 @@
-<object data="{{ include.link | relative_url }}"></object>

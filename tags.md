@@ -19,10 +19,7 @@ Choose a tag to see the comics with that tag.<br>
 {% for tag in tags %}
 <div id="{{tag | xml_escape}}" class="shos">
 <h2>Comics with the "{{tag}}" tag</h2>
-<ul>
-{% for post in site.tags[tag] reversed %}
-<li><a href="{{post.url|relative_url}}">{{post.date|date:site.date_format}}</a></li>
-{% endfor %}
-</ul>
+{% assign posts = site.tags[tag] %}
+{% include gregCalendar posts=posts %}
 </div>
 {% endfor %}
