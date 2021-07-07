@@ -3,7 +3,7 @@ title: About
 ---
 Fillbert is a webcomic created by [me, Vivi](https://mincerafter42.github.io). It should work with all major browsers _but not Internet Explorer. How is Internet Explorer still a thing; it's so incompatible with many Web technologies_
 
-The comics are drawn in [Inkscape](https://inkscape.org/), and hand-edited by me to reduce redundancy, mostly with the <abbr title="Scalable Vector Graphics">SVG</abbr>\ `<use>` element.  
+The comics are in the [Scalable Vector Graphics](https://www.w3.org/Graphics/SVG/) format. I draw them in [Inkscape](https://inkscape.org/), and then hand-edit them, which allows me to make them more compact (because Inkscape's optimization is often not very smart).  
 I have no clue what Inkscape's doing with coordinate spaces half the time.
 
 This site uses the [ISO 8601 week date](https://en.wikipedia.org/wiki/ISO_week_date) as its date format, as I aim to publish one comic every week.
@@ -15,4 +15,6 @@ Using SVG for the comics gives such advantages as:
 - I work better in vector art than raster
 - The comics have a small filesize.
   - This is an important factor to users like me
-  - To put it in professional terms, my Internet connection is frikkin&#39; slow
+  - To put it in professional terms, my Internet connection is frikkin' slow
+- SVG animations!
+  - Inkscape doesn't support SVG animations so all of those are added by hand too
