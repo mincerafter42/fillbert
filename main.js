@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', e => {
     	removeElementsWithTagName("animate");
     	removeElementsWithTagName("animateTransform");
     	removeElementsWithTagName("animateMotion");
+    	removeElementsWithTagName("set");
     	document.getElementById("disableAnimations").removeAttribute("checked");
     }
 });
