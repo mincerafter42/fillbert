@@ -12,6 +12,21 @@ body {
 a:any-link {
 	color: #ff0;
 }
+button {
+	color: #0ff;
+	font: inherit;
+	background: none;
+	padding: 0;
+	border: none;
+	text-decoration: underline;
+	cursor: pointer;
+}
+a:focus {
+	outline: thin solid #ff0;
+}
+button:focus {
+	outline: thin solid #0ff;
+}
 svg {
 	max-width: 100%;
 	height: auto;
@@ -64,6 +79,9 @@ thead.greg th {
 }
 thead.greg th:first-child {
 	min-width: 200px;	
+}
+input {
+	vertical-align: middle;
 }
 @media print {
 	header, footer, hr, nav {display: none}

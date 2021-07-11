@@ -6,9 +6,9 @@ function removeElementsWithTagName(tagName) {
 	while (document.getElementsByTagName(tagName).length > 0) document.getElementsByTagName(tagName)[0].remove()
 }
 
-function localStorageAndReload(key, value) {
+function invertLocalStorageAndReload(key) {
 	try {
-		window.localStorage.setItem(key, value);
+		window.localStorage.setItem(key, window.localStorage.getItem(key)=="false");
 		location.reload();
 	} catch(e) {alert(e.message)}
 }
@@ -19,6 +19,6 @@ document.addEventListener('DOMContentLoaded', e => {
     	removeElementsWithTagName("animateTransform");
     	removeElementsWithTagName("animateMotion");
     	removeElementsWithTagName("set");
-    	document.getElementById("disableAnimations").removeAttribute("checked");
+    	document.getElementById("disableAnimations").innerText = "Enable animations";
     }
 });
