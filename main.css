@@ -14,6 +14,8 @@ a:any-link {
 }
 button {
 	color: #0ff;
+}
+a:any-link, button {
 	font: inherit;
 	background: none;
 	padding: 0;
@@ -78,7 +80,7 @@ thead.greg th {
 	min-width: 35px;
 }
 thead.greg th:first-child {
-	min-width: 200px;	
+	min-width: 245px;	
 }
 input {
 	vertical-align: middle;
