@@ -1,0 +1,1 @@
+{{site.url|append:site.baseurl|append:"/"|remove:"https://"|remove:"http://"|replace:"//","/"|split:""|reverse|join:""|remove_first:"/"|split:""|reverse|join:""}}
