@@ -8,7 +8,7 @@ function removeElementsWithTagName(tagName) {
 
 function invertLocalStorageAndReload(key) {
 	try {
-		window.localStorage.setItem(key, window.localStorage.getItem(key)=="false");
+		window.localStorage.setItem(key, window.localStorage.getItem(key)==="false"||window.localStorage.getItem(key)===null);
 		location.reload();
 	} catch(e) {alert(e.message)}
 }
