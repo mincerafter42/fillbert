@@ -5,6 +5,7 @@ baseurl: "/fillbert"
 url: "https://mincerafter42.github.io"
 timezone: America/Vancouver
 
+exclude: [README.md]
 future: true
 kramdown:
  smart_quotes: "39,39,34,34"
