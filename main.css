@@ -37,10 +37,10 @@ nav ul {
 	padding: 9px 5px 5px;
 	background-color: #444;
 	border-radius: 9px;
+	text-align: center;
 }
 nav li {
-	float: left;
-	display: inline;
+	display: inline-block;
 	margin: 0 .5em;
 }
 ul {
