@@ -17,24 +17,14 @@ Liquid is a borderline esoteric language
 <table>
 <thead class="greg">
 <tr>
-<th></th>
-<th>Mon</th>
-<th>Tue</th>
-<th>Wed</th>
-<th>Thu</th>
-<th>Fri</th>
-<th>Sat</th>
-<th>Sun</th>
-</tr>
-<tr>
-<th>Week</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-<th>6</th>
-<th>7</th>
+<th scope="col">Week</th>
+<th scope="col">1</th>
+<th scope="col">2</th>
+<th scope="col">3</th>
+<th scope="col">4</th>
+<th scope="col">5</th>
+<th scope="col">6</th>
+<th scope="col">7</th>
 </tr>
 </thead>
 <tbody>
@@ -53,7 +43,7 @@ Liquid is a borderline esoteric language
 	{% if begMonth != endMonth %}{% assign rowspan = rowspan | plus: 2 %}{% endif %}
 	{% if begMonth != prevMonth %}{% assign rowspan = rowspan | plus: 1 %}{% endif %}
 	<tr>
-	<td{% if rowspan > 1 %} rowspan="{{rowspan}}"{% endif %}><a href="{{post.url|relative_url}}">{{post.date|date:site.date_format}}: {{post.title|downcase}}</a></td>
+	<td{% if rowspan > 1 %} rowspan="{{rowspan}}"{% endif %}><a href="{{post.url|relative_url}}">{{post.date|date:site.date_format}}: {{post.path|split:"/"|last|remove:".html"|remove:".md"|slice:11,post.path.size|replace:"-"," "|replace:"  ","-"}}</a></td>
 	
 	{% if begMonth != prevMonth %}
 		{% assign diffYear = begMonth | minus: prevMonth %}
