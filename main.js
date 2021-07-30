@@ -6,9 +6,9 @@ function removeElementsWithTagName(tagName) {
 	while (document.getElementsByTagName(tagName).length > 0) document.getElementsByTagName(tagName)[0].remove()
 }
 
-function invertLocalStorageAndReload(key) {
+function invertStorageFromId(element) {
 	try {
-		window.localStorage.setItem(key, window.localStorage.getItem(key)==="false"||window.localStorage.getItem(key)===null);
+		window.localStorage.setItem(element.id, window.localStorage.getItem(element.id)!="true");
 		location.reload();
 	} catch(e) {alert(e.message)}
 }
