@@ -3,7 +3,7 @@ tagline: "The Empty Space Cat"
 description: "A vector-based webcomic starring the empty space cat"
 baseurl: "/fillbert"
 url: "https://mincerafter42.github.io"
-timezone: America/Vancouver
+timezone: Etc/GMT
 
 exclude: [README.md]
 future: true
