@@ -33,6 +33,9 @@ svg {
 	max-width: 100%;
 	height: auto;
 }
+.dsc {
+	font-size: 0;
+}
 nav ul {
 	padding: 9px 5px 5px;
 	background-color: #444;
