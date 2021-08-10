@@ -1,0 +1,41 @@
+---
+title: Home
+---
+<a href="{{site.posts[0].url|relative_url}}"><svg width="800" height="800" version="1.1" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter id="bevel">
+   <feGaussianBlur in="SourceGraphic" result="result0" stdDeviation="4"/>
+   <feDiffuseLighting lighting-color="#fff" result="result5" surfaceScale="4">
+    <feDistantLight azimuth="235" elevation="45"/>
+   </feDiffuseLighting>
+   <feComposite in="result5" in2="SourceGraphic" k1="1.4" operator="arithmetic" result="fbSourceGraphic"/>
+   <feGaussianBlur in="fbSourceGraphic" result="result0" stdDeviation="4"/>
+   <feSpecularLighting lighting-color="#fff" in="result0" result="result1" specularExponent="25" surfaceScale="4">
+    <feDistantLight azimuth="235" elevation="45"/>
+   </feSpecularLighting>
+   <feComposite in="fbSourceGraphic" in2="result1" k2="1" k3="1" operator="arithmetic" result="result4"/>
+   <feComposite in="result4" in2="SourceGraphic" operator="in" result="result2"/>
+  </filter>
+ </defs>
+  <rect width="800" height="140" rx="0" ry="0" fill="#00f" filter="url(#bevel)">
+  <animate attributeName="fill" repeatCount="indefinite" dur="3s" values="#00f;#f00" calcMode="discrete"/>
+  </rect>
+ <rect y="140" width="800" height="60" fill="#ff0" filter="url(#bevel)"/>
+  <rect y="200" width="200" height="600" fill="#0f0" filter="url(#bevel)"/>
+ <rect x="200" y="200" width="600" height="600" fill="#f0f" filter="url(#bevel)"/>
+ <g font-family="Vivi" letter-spacing="0" word-spacing="0">
+  <text x="20" y="62" fill="#fff" font-size="42pt">FILLBERT The Empty Space Cat</text>
+  <text font-size="25pt" fill="#fff" x="14" y="112">The webcomic powered by Scalable Vector Graphics!</text>
+ <text x="42" y="178" font-size="28pt">Click this image to go to the latest comic!</text>
+ {% capture all %}{{site.posts}}{% endcapture %}
+ <text font-size="14pt"><tspan x="9" y="230"><tspan font-style="italic">Fillbert</tspan> contains:</tspan><tspan x="9" y="270">Math! </tspan><tspan x="9" y="310">Over {{all.size|divided_by: 1000}} kilobytes of </tspan><tspan x="9" y="330">comics and counting! </tspan><tspan x="9" y="370">SVG SMIL animations! </tspan><tspan x="9" y="410">At least one </tspan><tspan x="9" y="430">allosexual character! </tspan><tspan x="9" y="470">Gay!! </tspan></text>
+ </g>
+<image x="200" y="200" width="600" height="600" href="{{"/img/fillbert.svg"|relative_url}}"/>
+
+</svg></a>
+<p>
+Welcome to the web site of Fillbert, the cat that fills empty space! The site is being slowly filled with comics. Click the Fillbert above to go to the latest comic.
+</p>
+<p>
+<em>Fillbert</em> contains <abbr title="Scalable Vector Graphics">SVG</abbr>\ <abbr title="Synchronized Multimedia Integration Language">SMIL</abbr> animations. <noscript>If your browser had JavaScript enabled, there would be an option to disable animations in the header navigation.</noscript><span class="yescript">You can enable or disable animations using the button in the header navigation.</span>
+</p>
