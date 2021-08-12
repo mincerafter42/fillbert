@@ -24,11 +24,13 @@ title: Home
   <rect y="200" width="200" height="600" fill="#0f0" filter="url(#bevel)"/>
  <rect x="200" y="200" width="600" height="600" fill="#f0f" filter="url(#bevel)"/>
  <g font-family="Vivi" letter-spacing="0" word-spacing="0">
-  <text x="20" y="62" fill="#fff" font-size="42pt">FILLBERT The Empty Space Cat</text>
-  <text font-size="25pt" fill="#fff" x="14" y="112">The webcomic powered by Scalable Vector Graphics!</text>
- <text x="42" y="178" font-size="28pt">Click this image to go to the latest comic!</text>
+ <g text-anchor="middle"><g fill="#fff">
+  <text x="400" y="62" font-size="42pt">FILLBERT The Empty Space Cat</text>
+  <text font-size="25pt" x="400" y="112">The webcomic powered by Scalable Vector Graphics!</text></g>
+ <text x="400" y="178" font-size="28pt">Click this image to go to the latest comic!</text>
+ </g>
  {% capture all %}{{site.posts}}{% endcapture %}
- <text font-size="14pt"><tspan x="9" y="230"><tspan font-style="italic">Fillbert</tspan> contains:</tspan><tspan x="9" y="270">Math! </tspan><tspan x="9" y="310">Over {{all.size|divided_by: 1000}} kilobytes of </tspan><tspan x="9" y="330">comics and counting! </tspan><tspan x="9" y="370">SVG SMIL animations! </tspan><tspan x="9" y="410">At least one </tspan><tspan x="9" y="430">allosexual character! </tspan><tspan x="9" y="470">Gay!! </tspan></text>
+ <text font-size="14pt"><tspan x="9" y="230"><tspan font-style="italic">Fillbert</tspan> contains: </tspan><tspan x="9" y="270">Math! </tspan><tspan x="9" y="310">Over {{all.size|divided_by: 1000}} kilobytes of </tspan><tspan x="9" y="330">comics and counting! </tspan><tspan x="9" y="370">SVG SMIL animations! </tspan><tspan x="9" y="410">At least one </tspan><tspan x="9" y="430">allosexual character! </tspan><tspan x="9" y="470">Gay!! </tspan></text>
  </g>
 <image x="200" y="200" width="600" height="600" href="{{"/img/fillbert.svg"|relative_url}}"/>
 
