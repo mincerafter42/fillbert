@@ -30,7 +30,8 @@ title: Home
  <text x="400" y="178" font-size="28pt">Click this image to go to the latest comic!</text>
  </g>
  {% capture all %}{{site.posts}}{% endcapture %}
- <text font-size="14pt"><tspan x="9" y="230"><tspan font-style="italic">Fillbert</tspan> contains: </tspan><tspan x="9" y="270">Math! </tspan><tspan x="9" y="310">Over {{all.size|divided_by: 1000}} kilobytes of </tspan><tspan x="9" y="330">comics and counting! </tspan><tspan x="9" y="370">SVG SMIL animations! </tspan><tspan x="9" y="410">At least one </tspan><tspan x="9" y="430">allosexual character! </tspan><tspan x="9" y="470">Gay!! </tspan></text>
+ {% assign allSizeKb = all.size|divided_by: 1000 %}
+ <text font-size="14pt"><tspan x="9" y="230"><tspan font-style="italic">Fillbert</tspan> contains: </tspan><tspan x="9" y="270">Math! </tspan><tspan x="9" y="310">{% if allSizeKb < 1000 %}Over {{allSizeKb}}{% else %}{{allSizeKb}}+{% endif %} kilobytes of </tspan><tspan x="9" y="330">comics and counting! </tspan><tspan x="9" y="370">SVG SMIL animations! </tspan><tspan x="9" y="410">At least one </tspan><tspan x="9" y="430">allosexual character! </tspan><tspan x="9" y="470">ISO 8601 date and </tspan><tspan x="9" y="490">time formats! </tspan><tspan x="9" y="530">An above average </tspan><tspan x="9" y="550">amount of weirdness! </tspan><tspan x="9" y="590">Gay!! </tspan></text>
  </g>
 <image x="200" y="200" width="600" height="600" href="{{"/img/fillbert.svg"|relative_url}}"/>
 
