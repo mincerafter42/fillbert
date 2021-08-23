@@ -23,7 +23,7 @@ a:any-link, button {
 	text-decoration: underline;
 	cursor: pointer;
 }
-main a[href^="http"] {
+a[href^="http"] {
 	padding-right: 14px;
 	background: url("img/ext.svg") right no-repeat;
 }
@@ -97,7 +97,7 @@ input {
 	body {color: #000; background-color: #fff}
 	#comic {padding: 0; margin: 0; break-inside: avoid}
 	a:any-link {color: #00f}
-	main a[href^="http"] {background-image:url("img/ext.svg#p")}
+	a[href^="http"] {background-image:url("img/ext.svg#p")}
 	td {border-color: #000}
 	td.monthInd {background-color: #f99}
 }
