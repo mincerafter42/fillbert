@@ -9,6 +9,14 @@ body {
 	color: #fff;
 	background-color: #222;
 }
+header {
+	border-bottom: 3px solid #777;
+	padding-bottom: 9px;
+}
+footer {
+	border-top: 3px solid #777;
+	padding-top: 9px;
+}
 a:any-link {
 	color: #ff0;
 }
