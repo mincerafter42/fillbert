@@ -10,7 +10,7 @@ Every post:
 |Post |(if needed)  |
 |(with+-------------+
 |link)|Week (1 or 3 |
-|     |columns)     |
+|     |rows)        |
 +-----+-------------+
 Liquid is a borderline esoteric language
 {% endcomment %}
@@ -43,7 +43,7 @@ Liquid is a borderline esoteric language
 	{% if begMonth != endMonth %}{% assign rowspan = rowspan | plus: 2 %}{% endif %}
 	{% if begMonth != prevMonth %}{% assign rowspan = rowspan | plus: 1 %}{% endif %}
 	<tr>
-	<td{% if rowspan > 1 %} rowspan="{{rowspan}}"{% endif %}><a href="{{post.url|relative_url}}">{{post.date|date:site.date_format}}: {{post.path|split:"/"|last|remove:".html"|remove:".md"|slice:11,post.path.size|replace:"-"," "|replace:"  ","-"}}</a></td>
+	<td{% if rowspan > 1 %} rowspan="{{rowspan}}"{% endif %}><a href="{{post.url|relative_url}}">{% include title post=post %}</a></td>
 	
 	{% if begMonth != prevMonth %}
 		{% assign diffYear = begMonth | minus: prevMonth %}

@@ -1,0 +1,1 @@
+{{include.post.date|date:site.date_format}}: {{include.post.path|split:"/"|last|remove:".html"|remove:".md"|slice:11,include.post.path.size|replace:"-"," "|replace:"  ","-"}}
