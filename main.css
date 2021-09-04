@@ -77,7 +77,7 @@ ul ul, ul ol, ol ul, ol ol {
 	border-radius: 9px;
 	margin-bottom: 1em;
 }
-.shos {
+.shos:not(:target) {
 	display: none;
 }
 .shos:target {
