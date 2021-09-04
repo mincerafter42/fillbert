@@ -6,7 +6,7 @@ title: Tag search
 {% for post in site.posts %}
 {% assign tags = tags | concat: post.tags %}
 {% endfor %}
-{% assign tags = tags | uniq | sort_natural %}
+{% assign tags = tags | uniq | sort %}
 
 <nav>
 Choose a tag to see the comics with that tag.<br>

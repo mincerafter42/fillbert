@@ -17,7 +17,7 @@ layout: compressxml
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
         <link>{{ post.url | absolute_url }}</link>
         <guid>{{ post.url | absolute_url }}</guid>
-        {% assign sortedTags = post.tags | sort_natural %}
+        {% assign sortedTags = post.tags | sort %}
         {% for tag in sortedTags %}
         <category>{{ tag | xml_escape }}</category>
         {% endfor %}
