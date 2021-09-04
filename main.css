@@ -80,9 +80,6 @@ ul ul, ul ol, ol ul, ol ol {
 .shos:not(:target) {
 	display: none;
 }
-.shos:target {
-	display: block;
-}
 table {
 	border-collapse: collapse;
 	margin: 0 auto;
