@@ -19,13 +19,13 @@ footer {
 	padding-top: 9px;
 	margin-top: 1em;
 }
-a:any-link {
+a:link, a:visited {
 	color: #ff0;
 }
 button {
 	color: #0ff;
 }
-a:any-link, button {
+a:link, a:visited, button {
 	font: inherit;
 	background: none;
 	padding: 0;
