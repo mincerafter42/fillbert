@@ -2,13 +2,20 @@
 layout: compressxml
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:creativeCommons="http://backend.userland.com/creativeCommonsRssModule">
+<rss version="2.0">
+  <div xmlns="http://www.w3.org/1999/xhtml">
+    <style>channel{display:none}div{font-family:sans-serif}</style>
+    <p>This is a <b>Really Simple Syndication</b> feed. It can be used with a <b>feed reader</b> to notify you when a new <i>Fillbert</i> comic is published.
+    <br/>To exit, use your browser's Back button.</p>
+    <p>This feed is valid.<br/><a href="https://validator.w3.org/feed/check.cgi?url=https%3A//mincerafter42.github.io/fillbert/rss.xml"><img width="88" height="31" src="{{'/img/valid-rss.svg'|relative_url}}" alt="Valid RSS"/></a></p>
+  </div>
   <channel>
-    <creativeCommons:license>https://creativecommons.org/licenses/by-nc/4.0/</creativeCommons:license>
+    <license xmlns="http://backend.userland.com/creativeCommonsRssModule">https://creativecommons.org/licenses/by-nc/4.0/</license>
     <docs>https://www.rssboard.org/rss-specification</docs>
     <title>{{ site.title | xml_escape }}</title>
     <description>{{ site.description | xml_escape }}</description>
     <link>{{ site.url }}{{ site.baseurl }}/</link>
+    <link xmlns="http://www.w3.org/2005/Atom" href="{{page.url|absolute_url|xml_escape}}" rel="self" type="application/rss+xml"/>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
     {% for post in site.posts limit:10 %}
