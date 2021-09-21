@@ -1,7 +1,7 @@
 ---
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="600" height="600" version="1.1" viewBox="0 0 159 159" xmlns="http://www.w3.org/2000/svg">
+<svg width="600" height="600" viewBox="0 0 159 159" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(0 -138)" stroke="#000" stroke-linecap="round">
   <g transform="translate(.36 -1.98)" stroke-linejoin="round" id="ear">
    <path d="m35.8 195-2.69-36 28.3 12.8" fill="#fff" stroke-width="1.32"/>
