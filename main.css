@@ -87,14 +87,76 @@ table {
 td {
 	border: 1px solid white;
 }
-td.monthInd {
+.greg .head {
+	font-weight: bold;
+	display: none;
+	display: flex;
+	width: 500px;
+	margin: 0 auto;
+}
+.greg .head span:first-child {
+	flex: 0 0 51%;
+}
+.greg .head span {
+	flex: 1;
+}
+.greg ol, .greg ul {
+	display:flex;
+	flex-direction:column;
+	width:500px;
+	padding: 0;
+	margin: 0 auto;
+	border: solid white;
+	border-width: 0 1px 1px 0;
+}
+.greg li {
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+}
+.greg li .cal {
+	display: none;
+	display:flex;
+	flex-direction:column;
+	flex: 49%;
+}
+.greg li .link {
+	display:flex;
+	flex-direction:column;
+	flex: 51%;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	border: solid white;
+	border-width: 1px 0 0 1px;
+}
+.greg .weekInd {
+	display: flex;
+	flex-direction: row;
+	flex: 1;
+}
+.greg .weekInd .dayInd {
+	display:flex;
+	flex-direction:column;
+	width: 34px;
+	text-align: center;
+	justify-content: center;
+	border: solid white;
+	border-width: 1px 0 0 1px;
+}
+.greg .weekInd .weekPad {
+	border: solid white;
+	border-width: 1px 0 0 1px;
+}
+.greg .monthInd {
 	background-color: #066;
-}
-thead.greg th {
-	min-width: 35px;
-}
-thead.greg th:first-child {
-	min-width: 245px;	
+	text-align: center;
+	border: solid white;
+	border-width: 1px 0 0 1px;
+	flex: 1;
+	display:flex;
+	flex-direction:column;
+	justify-content: center;
 }
 input {
 	vertical-align: middle;

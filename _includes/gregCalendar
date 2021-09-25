@@ -4,6 +4,7 @@ When using gregCalendar, include.posts should be a *reverse chronological* array
 Every post is displayed next to its corresponding week in the Gregorian calendar.
 If the post is in a different month than the post before it, a month divider is shown above the week.
 The week itself may be 1 row or 3 rows high, depending on if it contains its own month divider.
+Accessibility tech only sees the list of comics, not the calendar weeks. Falls back to a list without calendar if flexbox is not supported.
 Every post:
 +-----+-------------+
 |     |Month divider|
@@ -14,20 +15,18 @@ Every post:
 +-----+-------------+
 Liquid is a borderline esoteric language
 {% endcomment %}
-<table>
-<thead class="greg">
-<tr>
-<th scope="col">Week</th>
-<th scope="col">1</th>
-<th scope="col">2</th>
-<th scope="col">3</th>
-<th scope="col">4</th>
-<th scope="col">5</th>
-<th scope="col">6</th>
-<th scope="col">7</th>
-</tr>
-</thead>
-<tbody>
+<div class="greg">
+<div aria-hidden="true" class="head">
+<span>Week</span>
+<span>1</span>
+<span>2</span>
+<span>3</span>
+<span>4</span>
+<span>5</span>
+<span>6</span>
+<span>7</span>
+</div>
+<{% if include.ordered %}ol{% else %}ul{% endif %}>
 {% assign adds = "0,86400,172800,259200,345600,432000,518400" | split: "," %}
 {% for post in include.posts reversed %}
 	{% assign subtr = post.date | date: "%u" | minus: 1 | times: 86400 %}
@@ -42,38 +41,40 @@ Liquid is a borderline esoteric language
 	{% assign rowspan = 1 %}
 	{% if begMonth != endMonth %}{% assign rowspan = rowspan | plus: 2 %}{% endif %}
 	{% if begMonth != prevMonth %}{% assign rowspan = rowspan | plus: 1 %}{% endif %}
-	<tr>
-	<td{% if rowspan > 1 %} rowspan="{{rowspan}}"{% endif %}><a href="{{post.url|relative_url}}">{% include title post=post %}</a></td>
-	
+	<li>
+	<div class="link"><a href="{{post.url|relative_url}}">{% include title post=post %}</a></div>
+	<span aria-hidden="true" class="cal">	
 	{% if begMonth != prevMonth %}
 		{% assign diffYear = begMonth | minus: prevMonth %}
-		<td colspan="7" class="monthInd">
+		<span class="monthInd">
 		{% if diffYear > 12 %}
 			{{ beginningOfWeek | date: "%Y %B" }}
 		{% else %}
 			{{ beginningOfWeek | date: "%B" }}
 		{% endif %}
-		</td>
-		</tr>
-		<tr>
+		</span>
 	{% endif %}
-
+	
+	<span class="weekInd">
 	{% for add in adds %}
 		{% assign currentMonth = beginningOfWeek | plus: add | date: "%Y%m" %}
 		{% if currentMonth != begMonth %}
-			<td colspan="{{forloop.rindex}}"></td>
-			</tr>
-			<tr><td colspan="7" class="monthInd">
+			<span class="weekPad" style="flex-grow:{{forloop.rindex}}"></span>
+			</span>
+			<span class="monthInd">
 			{% assign endJan = endOfWeek | date: "%m" %}
 			{% if endJan == "01" %}{{endOfWeek | date: "%Y %B"}}{% else %}{{endOfWeek | date: "%B"}}{% endif %}
-			</td></tr>
-			<tr>
-			<td colspan="{{forloop.index0}}"></td>
+			</span>
+			<span class="weekInd">
+			<span class="weekPad" style="flex-grow:{{forloop.index0}}"></span>
 			{% assign begMonth = endMonth %}
 		{% endif %}
-		<td>{{beginningOfWeek | plus: add | date: "%e"}}</td>
+		<span class="dayInd">{{beginningOfWeek | plus: add | date: "%e"}}</span>
 	{% endfor %}
-	</tr>
+	</span>
+	
+	</span>
+	</li>
 {% endfor %}
-</tbody>
-</table>
+</{% if include.ordered %}ol{% else %}ul{% endif %}>
+</div>
