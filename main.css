@@ -114,13 +114,13 @@ td {
 	flex-direction:row;
 	justify-content:space-between;
 }
-.greg li .cal {
+.greg .cal {
 	display: none;
 	display:flex;
 	flex-direction:column;
 	flex: 49%;
 }
-.greg li .link {
+.greg .link {
 	display:flex;
 	flex-direction:column;
 	flex: 51%;
@@ -130,12 +130,15 @@ td {
 	border: solid white;
 	border-width: 1px 0 0 1px;
 }
+.greg .link a {
+	max-width: 240px;
+}
 .greg .weekInd {
 	display: flex;
 	flex-direction: row;
 	flex: 1;
 }
-.greg .weekInd .dayInd {
+.greg .dayInd {
 	display:flex;
 	flex-direction:column;
 	width: 34px;
@@ -144,7 +147,7 @@ td {
 	border: solid white;
 	border-width: 1px 0 0 1px;
 }
-.greg .weekInd .weekPad {
+.greg .weekPad {
 	border: solid white;
 	border-width: 1px 0 0 1px;
 }
