@@ -42,7 +42,7 @@ Liquid is a borderline esoteric language
 	{% if begMonth != endMonth %}{% assign rowspan = rowspan | plus: 2 %}{% endif %}
 	{% if begMonth != prevMonth %}{% assign rowspan = rowspan | plus: 1 %}{% endif %}
 	<li>
-	<div class="link"><a href="{{post.url|relative_url}}">{% include title post=post %}</a></div>
+	<div class="link"><span><a href="{{post.url|relative_url}}">{% include title post=post %}</a></span></div>
 	<span aria-hidden="true" class="cal">	
 	{% if begMonth != prevMonth %}
 		{% assign diffYear = begMonth | minus: prevMonth %}
