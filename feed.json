@@ -1,0 +1,18 @@
+---
+layout: null
+---
+{"version":"https://www.jsonfeed.org/version/1.1/","title":{{site.title|jsonify
+}},"home_page_url":{{"/"|absolute_url|jsonify
+}},"feed_url":{{page.url|absolute_url|jsonify
+}},"description":{{site.description|jsonify
+}},"items":[{% for post in site.posts limit:10
+		%}{"id":{{post.url|absolute_url|jsonify
+		}},"url":{{post.url|absolute_url|jsonify
+		}},"title":{% capture title %}{% include title post=post %}{% endcapture %}{{title | jsonify
+		}},"content_text": {{ post.url | absolute_url | prepend: "
+" | prepend: title | jsonify
+		}},"date_published":{{ post.date | date: "%FT%TZ" |jsonify 
+		}},"tags":{% assign sortedTags = post.tags | sort_natural %}{{sortedTags|jsonify
+		}}}{% if forloop.last != true %},{% endif 
+		%}{% endfor 
+	%}]}

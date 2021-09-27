@@ -3,12 +3,6 @@ layout: compressxml
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
-  <div xmlns="http://www.w3.org/1999/xhtml">
-    <style>channel{display:none}div{font-family:sans-serif}</style>
-    <p>This is a <b>Really Simple Syndication</b> feed. It can be used with a <b>feed reader</b> to notify you when a new <i>Fillbert</i> comic is published.
-    <br/>To exit, use your browser's Back button.</p>
-    <p>This feed is valid.<br/><a href="https://validator.w3.org/feed/check.cgi?url=https%3A//mincerafter42.github.io/fillbert/rss.xml"><img width="88" height="31" src="{{'/img/valid-rss.svg'|relative_url}}" alt="Valid RSS"/></a></p>
-  </div>
   <channel>
     <license xmlns="http://backend.userland.com/creativeCommonsRssModule">https://creativecommons.org/licenses/by-nc/4.0/</license>
     <docs>https://www.rssboard.org/rss-specification</docs>

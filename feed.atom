@@ -1,0 +1,26 @@
+---
+layout: compressxml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <author><name>Vivi</name></author>
+  <id>{{ site.url }}{{ site.baseurl }}/</id>
+  <generator>Jekyll v{{ jekyll.version }}</generator>
+  <link rel="self" href="{{page.url|absolute_url}}"/>
+  <title>{{ site.title | xml_escape }}</title>
+  <subtitle>{{ site.description | xml_escape }}</subtitle>
+  <updated>{{ site.time | date: "%FT%TZ"}}</updated>
+  <rights type="html">&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/"&gt;Creative Commons Attribution-NonCommercial 4.0 International License&lt;/a&gt;</rights>
+  {% for post in site.posts limit:10 %}
+   <entry>
+    <title>{% include title post=post %}</title>
+    <updated>{{ post.date | date: "%FT%TZ" }}</updated>
+    <link href="{{ post.url | absolute_url }}"/>
+    <id>{{ post.url | absolute_url }}</id>
+    {% assign sortedTags = post.tags | sort_natural %}
+    {% for tag in sortedTags %}
+     <category term="{{ tag | xml_escape }}"/>
+    {% endfor %}
+   </entry>
+  {% endfor %}
+</feed>
