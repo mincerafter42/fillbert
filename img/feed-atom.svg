@@ -1,0 +1,30 @@
+---
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+<g stroke-width="10">
+ <defs>
+  <mask id="trans" stroke="#000" fill="#fff">
+   <rect stroke="none" width="500" height="500"/>
+   <circle cx="245" cy="263" r="65"/>
+   <circle cx="245" cy="47" r="43"/>
+   <circle cx="54" cy="353" r="43"/>
+   <circle cx="446" cy="353" r="43"/>
+  </mask>
+ </defs>
+ <g mask="url(#trans)">
+  <g fill="none" transform="translate(245 263)">
+   <ellipse rx="29" ry="215" stroke="#6e8c9b"/>
+   <ellipse transform="rotate(-65)" rx="29" ry="215" stroke="#d5cc74"/>
+   <ellipse transform="rotate(65)" rx="29" ry="215" stroke="#83a4c0"/>
+   <circle r="215" stroke="#646b41"/>
+   <circle r="65" fill="#83a4c0"/>
+  </g>
+  <g fill="#6e8c9b">
+   <circle cx="245" cy="47" r="43"/>
+   <circle cx="54" cy="353" r="43"/>
+   <circle cx="446" cy="353" r="43"/>
+  </g>
+ </g>
+</g>
+</svg>
