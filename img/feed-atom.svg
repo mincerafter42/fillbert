@@ -1,11 +1,11 @@
 ---
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-25-26.75 50 50">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="-25 -26.75 50 50">
  <defs>
   <mask id="trans" stroke="#000" fill="#fff">
    <rect stroke="none" width="60" height="60" x="-30" y="-30"/>
-   <circle r="6.5" id="n"/>
+   <circle r="6.5"/>
    <g id="e">
     <circle cy="-22" r="4.5"/>
     <circle cx="-20" cy="9" r="4.5"/>
@@ -20,7 +20,7 @@
    <ellipse stroke="#80a3cf" rx="3" ry="22" transform="rotate(66)"/>
    <circle stroke="#4b541f" r="22"/>
   </g>
-   <use xlink:href="#n" fill="#80a3cf"/>
-   <use xlink:href="#e" fill="#66899a"/>
+  <circle r="6.5" fill="#80a3cf"/>
+  <use xlink:href="#e" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#66899a"/>
  </g>
 </svg>
