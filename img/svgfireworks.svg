@@ -8,7 +8,7 @@ Originally retreived from https://web.archive.org/web/20011005154324/http://www.
 XML mangling done by Vivi/mincerafter42, to make it display in modern browsers.
 zurich_by_night.jpg appears to be lost forever.
 -->
-<svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="710" height="500" viewBox="-355 -250 710 500" zoomAndPan="disable">
+<svg xmlns="http://www.w3.org/2000/svg" version="2.0" width="710" height="500" viewBox="-355 -250 710 500" zoomAndPan="disable">
 	<defs>
 		<symbol id="whiteYellowBezier" overflow="visible">
 			<path style="stroke:black;fill:none;" d="M 0,0 C 0.25,-0.1 0.75,-0.1 1,0">
