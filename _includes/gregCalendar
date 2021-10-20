@@ -16,7 +16,7 @@ Every post:
 Liquid is a borderline esoteric language
 {% endcomment %}
 <div class="greg">
-<div aria-hidden="true" class="head">
+<div hidden aria-hidden="true" class="head">
 <span>Week</span>
 <span>1</span>
 <span>2</span>
@@ -43,7 +43,7 @@ Liquid is a borderline esoteric language
 	{% if begMonth != prevMonth %}{% assign rowspan = rowspan | plus: 1 %}{% endif %}
 	<li>
 	<div class="link"><span><a href="{{post.url|relative_url}}">{% include title post=post %}</a></span></div>
-	<span aria-hidden="true" class="cal">	
+	<span hidden aria-hidden="true" class="cal">	
 	{% if begMonth != prevMonth %}
 		{% assign diffYear = begMonth | minus: prevMonth %}
 		<span class="monthInd">
