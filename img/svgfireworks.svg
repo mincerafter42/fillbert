@@ -206,13 +206,13 @@ zurich_by_night.jpg appears to be lost forever.
 	<use x="0" y="0" href="#pinkBlueFireball" transform="translate(250,-220),scale(1.5)" opacity="0">
 		<animate attributeName="opacity" values="0;1" dur="5s" begin="justAFlashAnim.end + 5s;" fill="freeze"/>	
 	</use>
-	<text id="SVG" x="70" y="-40" style="fill:yellow;font-size:70;font-weight:bold;text-anchor:middle;" opacity="0">SVG
+	<text id="SVG" x="70" y="-40" style="fill:yellow;font-size:70px;font-weight:bold;text-anchor:middle;" opacity="0">SVG
 		<animate attributeName="opacity" values="0;0.9" dur="5s" begin="whiteYellowBezierAnim.end;" fill="freeze"/>
 	</text>
-	<text id="moreThan" x="-100" y="-150" style="fill:yellow;font-size:30;text-anchor:middle;" opacity="0">more than ...
+	<text id="moreThan" x="-100" y="-150" style="fill:yellow;font-size:30px;text-anchor:middle;" opacity="0">more than ...
 		<animate attributeName="opacity" values="0;0.7" dur="5s" begin="whiteYellowBezierTimeShiftAnim.end;" fill="freeze"/>
 	</text>
-	<text id="justAFlash" x="170" y="-130" style="fill:yellow;font-size:40;text-anchor:middle;" opacity="0">... just a flash!
+	<text id="justAFlash" x="170" y="-130" style="fill:yellow;font-size:40px;text-anchor:middle;" opacity="0">... just a flash!
 		<animate id="justAFlashAnim" attributeName="opacity" values="0;10" dur="1s" begin="redBezierAnim.end;" fill="freeze"/>
 	</text>
 </svg>
