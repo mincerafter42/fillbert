@@ -2,9 +2,11 @@
 layout: comic
 ---
 <svg width="900" height="300" viewBox="-22 -22 900 300">
-  <text x="-21" y="-5" font-family="Vivi" font-size="17px" letter-spacing="0" word-spacing="0">FILLBERT © {{page.date|date:"%G"}} Vivi</text>
+<g font-family="Vivi" font-size="17px" letter-spacing="0" word-spacing="0">
+  <text x="-21" y="-5" aria-hidden="true">FILLBERT © {{page.date|date:"%G"}} Vivi</text>
 {{content}}
   <rect id="panel" width="406" height="256" fill="none" stroke="#000" stroke-width="6"/>
   <use href="#panel" x="450"/>
-  <text x="877" y="273" font-family="Vivi" font-size="17px" letter-spacing="0" word-spacing="0" text-anchor="end">CC-BY-NC {% include url %}</text>
+  <text x="877" y="273" text-anchor="end" aria-hidden="true">CC-BY-NC {% include url %}</text>
+</g>
 </svg>
