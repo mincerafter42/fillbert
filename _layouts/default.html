@@ -11,7 +11,8 @@ layout: compressxml
 <script src="{{"/main.js"|relative_url}}"></script>
 </head>
 <body>
-<header>{{site.title}} {{site.tagline}}<nav>
+<header><nav class="skip"><a href="#main">Skip to content</a></nav>
+{{site.title}} {{site.tagline}}<nav>
 <ul>
 <li><a href="{{"/" | relative_url}}">Home</a></li>
 <li><a href="{{"/about" | relative_url}}">About</a></li>
@@ -22,7 +23,7 @@ layout: compressxml
 <li class="yescript"><button type="button" id="disableAnimations" onclick="invertStorageFromId(this)">Disable animations</button></li>
 </ul></nav>
 </header>
-<main>
+<main id="main">
 {{content}}
 </main>
 <footer>Fillbert © {{site.time|date:"%G"}} Vivi. <br/>Except where otherwise noted, Fillbert is licensed under a <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>
