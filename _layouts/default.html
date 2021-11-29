@@ -8,7 +8,7 @@ layout: compressxml
 <link rel="stylesheet" href="{{"/main.css" | relative_url}}"/>
 <link rel="icon" href="{{"/img/fav.gif"|relative_url}}"/>
 <noscript><style>.yescript{display:none}</style></noscript>
-<title>Fillbert {% if layout.is_comic %}comic for {{page.date|date:site.date_format}}{% else %}| {{page.title}}{% endif %}</title>
+<title>Fillbert {% if layout.is_comic %}comic for {% include title post=page %}{% else %}| {{page.title}}{% endif %}</title>
 <script src="{{"/main.js"|relative_url}}"></script>
 </head>
 <body>

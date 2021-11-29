@@ -2,7 +2,7 @@
 layout: default
 is_comic: true
 ---
-<h1>Comic for {{ page.date | date: site.date_format }}</h1>
+<h1>{% include title post=page %}</h1>
 <div id="comic">
 {{content}}
 </div>
