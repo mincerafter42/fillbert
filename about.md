@@ -13,8 +13,8 @@ Using SVG for the comics gives such advantages as:
 - no matter how much you zoom in, the comics are still crisp
 - I work better in vector art than raster
 - The comics have a small filesize.
-  - This is an important factor to users like me
-  - To put it in professional terms, my Internet connection is frikkin' slow
+  - This is an important factor to users like me.  
+    To put it in professional terms, my Internet connection is frikkin' slow
 - SVG animations!
   - Inkscape doesn't support SVG animations so all of those are added by hand too
 
