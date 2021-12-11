@@ -1,0 +1,12 @@
+{% if page.url != '/404.html' -%}
+{% assign currentUrl = page.url | append: "" | split: "/" -%}
+{% assign goalUrl = include.u | append: "" | split: "/" -%}
+{% for i in currentUrl -%}
+ {% if i != goalUrl[forloop.index0] -%}
+  {% assign prep='' -%}
+  {% for j in (1..forloop.rindex0) %}{% assign prep = prep | append: '../' %}{% endfor -%}
+  {{goalUrl | slice: forloop.index0, goalUrl.size | join: "/"|remove:"" | prepend: prep |default: "."}}
+  {%- break -%}
+ {% endif -%}
+{% endfor -%}
+{% else %}{{include.u | relative_url}}{% endif -%}

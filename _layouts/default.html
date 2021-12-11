@@ -5,22 +5,22 @@ layout: compressxml
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<link rel="stylesheet" href="{{"/main.css" | relative_url}}"/>
-<link rel="icon" href="{{"/img/fav.gif"|relative_url}}"/>
+<link rel="stylesheet" href="{% include rel u='/main.css' %}"/>
+<link rel="icon" href="{% include rel u='/img/fav.gif' %}"/>
 <noscript><style>.yescript{display:none}</style></noscript>
 <title>Fillbert {% if layout.is_comic %}comic for {% include title post=page %}{% else %}| {{page.title}}{% endif %}</title>
-<script src="{{"/main.js"|relative_url}}"></script>
+<script src="{% include rel u='/main.js' %}"></script>
 </head>
 <body>
 <header><nav class="skip"><a href="#main">Skip to content</a></nav>
 {{site.title}} {{site.tagline}}<nav>
 <ul>
-<li><a href="{{"/" | relative_url}}">Home</a></li>
-<li><a href="{{"/about" | relative_url}}">About</a></li>
-<li><a href="{{"/archive" | relative_url}}">Archive</a></li>
-<li><a href="{{"/tags" | relative_url}}">Tag search</a></li>
-<li><a href="{{"/feeds" | relative_url}}">Feeds</a></li>
-<li><a href="{{"/social" | relative_url}}">Social</a></li>
+<li><a href="{% include rel u='/' %}">Home</a></li>
+<li><a href="{% include rel u='/about' %}">About</a></li>
+<li><a href="{% include rel u='/archive' %}">Archive</a></li>
+<li><a href="{% include rel u='/tags' %}">Tag search</a></li>
+<li><a href="{% include rel u='/feeds' %}">Feeds</a></li>
+<li><a href="{% include rel u='/social' %}">Social</a></li>
 <li class="yescript"><button type="button" id="disableAnimations" onclick="invertStorageFromId(this)">Disable animations</button></li>
 </ul></nav>
 </header>

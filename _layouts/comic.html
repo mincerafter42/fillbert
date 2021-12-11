@@ -6,5 +6,5 @@ is_comic: true
 <div id="comic">
 {{content}}
 </div>
-<nav><ul><li><a href="{{site.posts[-1].url|relative_url}}" rel="first">First comic</a></li><li><a{% if page.previous %} href="{{page.previous.url|relative_url}}" rel="prev"{%endif%}>Previous comic</a></li><li><noscript>Permalink: {{page.url|absolute_url}}</noscript><button class="yescript" type="button" onclick='copy("{{page.url|absolute_url}}")'>Copy permalink</button></li><li><a{% if page.next %} href="{{page.next.url|relative_url}}" rel="next"{%endif%}>Next comic</a></li><li><a href="{{site.posts[0].url|relative_url}}" rel="last">Latest comic</a></li></ul></nav>
+<nav><ul><li><a href="{% include rel u=site.posts.last.url %}" rel="first">First comic</a></li><li><a{% if page.previous %} href="{% include rel u=page.previous.url %}" rel="prev"{%endif%}>Previous comic</a></li><li><noscript>Permalink: {{page.url|absolute_url}}</noscript><button class="yescript" type="button" onclick='copy("{{page.url|absolute_url}}")'>Copy permalink</button></li><li><a{% if page.next %} href="{% include rel u=page.next.url %}" rel="next"{%endif%}>Next comic</a></li><li><a href="{% include rel u=site.posts.first.url %}" rel="last">Latest comic</a></li></ul></nav>
 {% if page.commentary %}<h2 id="commentary">Commentary</h2>{{page.commentary | markdownify}}{% endif %}
