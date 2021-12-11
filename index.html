@@ -33,12 +33,12 @@ title: Home
  {% assign allSizeKb = all.size|divided_by: 1000 %}
  <text font-size="14pt"><tspan x="9" y="230"><tspan font-style="italic">Fillbert</tspan> contains: </tspan><tspan x="9" y="270">Math! </tspan><tspan x="9" y="310">{% if allSizeKb < 1000 %}Over {{allSizeKb}}{% else %}{{allSizeKb}}+{% endif %} kilobytes of </tspan><tspan x="9" y="330">comics and counting! </tspan><tspan x="9" y="370">SVG SMIL animations! </tspan><tspan x="9" y="410">At least one </tspan><tspan x="9" y="430">allosexual character! </tspan><tspan x="9" y="470">ISO 8601 date and </tspan><tspan x="9" y="490">time formats! </tspan><tspan x="9" y="530">An above average </tspan><tspan x="9" y="550">amount of weirdness! </tspan><tspan x="9" y="590">Gay!! </tspan></text>
  </g>
- <a href="{{site.posts.first.url|relative_url}}">
-<image x="200" y="200" width="600" height="600" href="{{"/img/fillbert.svg"|relative_url}}"/>
+ <a href="{% include rel u=site.posts.first.url %}">
+<image x="200" y="200" width="600" height="600" href="{% include rel u='/img/fillbert.svg'%}"/>
 </a>
 </svg>
 <p>
-Welcome to the web site of Fillbert, the cat that fills empty space! The site is being slowly filled with comics. Click the Fillbert above to go to <a href="{{site.posts.first.url|relative_url}}">the latest comic</a>.
+Welcome to the web site of Fillbert, the cat that fills empty space! The site is being slowly filled with comics. Click the Fillbert above to go to <a href="{% include rel u=site.posts.first.url %}">the latest comic</a>.
 </p>
 <p>
 <i>Fillbert</i> contains <abbr title="Scalable Vector Graphics">SVG</abbr>\ <abbr title="Synchronized Multimedia Integration Language">SMIL</abbr> animations. <noscript>If your browser had JavaScript enabled, there would be an option to disable animations in the header navigation.</noscript><span class="yescript">You can enable or disable animations using the button in the header navigation.</span>
