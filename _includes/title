@@ -1,1 +1,1 @@
-{{include.post.date|date:site.date_format}}: {{include.post.path|split:"/"|last|remove:".html"|remove:".md"|slice:11,include.post.path.size|replace:"-"," "|replace:"  ","-"}}
+{{include.post.date|date:site.date_format}}: {% if include.s and include.post.sTitle %}{{include.post.sTitle}}{% else %}{{include.post.path|split:"/"|last|remove:".html"|remove:".md"|slice:11,include.post.path.size|replace:"-"," "|replace:"  ","-"}}{% endif %}

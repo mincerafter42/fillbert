@@ -1,5 +1,6 @@
 ---
 title: Tag search
+Fabian: <span lang=de>Fabian</span>
 ---
 {% comment %}can't find a documented way to get the *names* of the tags from site.tags so here we are{% endcomment %}
 {% assign tags = "" | split: "" %}
@@ -12,13 +13,13 @@ title: Tag search
 Choose a tag to see the comics with that tag.<br>
 <ul>
 {% for tag in tags %}
-<li><a href="#{{tag | xml_escape}}">{{tag}} ({{site.tags[tag].size}})</a></li>
+<li><a href="#{{tag | xml_escape}}">{{page[tag]|default:tag}} ({{site.tags[tag].size}})</a></li>
 {% endfor %}
 </ul>
 </nav>
 {% for tag in tags %}
 <div id="{{tag | xml_escape}}" class="shos">
-<h2>Comics with the "{{tag}}" tag</h2>
+<h2>Comics with the "{{page[tag]|default:tag}}" tag</h2>
 {% assign posts = site.tags[tag] %}
 {% include gregCalendar posts=posts %}
 </div>
