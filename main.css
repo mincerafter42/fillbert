@@ -139,6 +139,7 @@ td {
 	justify-content: center;
 	border: solid white;
 	border-width: 1px 0 0 1px;
+	box-sizing: border-box;
 }
 .greg .link a {
 	max-width: 240px;
