@@ -70,7 +70,7 @@ nav li {
 	display: inline-block;
 	margin: 0 .5em;
 }
-ul, ol {
+ul, ol, dl {
 	display: inline-block;
 	text-align: initial;
 	margin: 0;
@@ -78,6 +78,7 @@ ul, ol {
 ul ul, ul ol, ol ul, ol ol {
 	display: block;
 }
+dt {font-weight:bold}
 #comic {
 	text-decoration: none;
 	background-color: #fff;
@@ -179,6 +180,6 @@ q::before, q::after {content:'"'}
 	#comic {padding: 0; margin: 0; break-inside: avoid}
 	a:any-link {color: #00f}
 	a[href^="http"] {background-image:url("img/ext.svg#p")}
-	td {border-color: #000}
-	td.monthInd {background-color: #f99}
+	td, .greg ol, .greg ul, .greg .link, .greg .dayInd, .greg .weekPad, .greg .monthInd {border-color: #000}
+	.greg .monthInd {background-color: #f99}
 }
