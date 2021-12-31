@@ -15,8 +15,8 @@ Every post:
 +-----+-------------+
 Liquid is a borderline esoteric language
 {% endcomment %}
-<div class="greg">
-<div hidden aria-hidden="true" class="head">
+<div class=greg>
+<div hidden aria-hidden=true class=head>
 <span>Week</span>
 <span>1</span>
 <span>2</span>
@@ -42,11 +42,11 @@ Liquid is a borderline esoteric language
 	{% if begMonth != endMonth %}{% assign rowspan = rowspan | plus: 2 %}{% endif %}
 	{% if begMonth != prevMonth %}{% assign rowspan = rowspan | plus: 1 %}{% endif %}
 	<li>
-	<div class="link"><span><a href="{% include rel u=post.url %}">{% include title post=post s=1 %}</a></span></div>
-	<span hidden aria-hidden="true" class="cal">	
+	<div class=link><span><a href="{% include rel u=post.url %}">{% include title post=post s=1 %}</a></span></div>
+	<span hidden aria-hidden=true class=cal>	
 	{% if begMonth != prevMonth %}
 		{% assign diffYear = begMonth | minus: prevMonth %}
-		<span class="monthInd">
+		<span class=monthInd>
 		{% if diffYear > 12 %}
 			{{ beginningOfWeek | date: "%Y %B" }}
 		{% else %}
@@ -55,26 +55,25 @@ Liquid is a borderline esoteric language
 		</span>
 	{% endif %}
 	
-	<span class="weekInd">
+	<span class=weekInd>
 	{% for add in adds %}
 		{% assign currentMonth = beginningOfWeek | plus: add | date: "%Y%m" %}
 		{% if currentMonth != begMonth %}
-			<span class="weekPad" style="flex-grow:{{forloop.rindex}}"></span>
+			<span class=weekPad style=flex-grow:{{forloop.rindex}}></span>
 			</span>
-			<span class="monthInd">
+			<span class=monthInd>
 			{% assign endJan = endOfWeek | date: "%m" %}
 			{% if endJan == "01" %}{{endOfWeek | date: "%Y %B"}}{% else %}{{endOfWeek | date: "%B"}}{% endif %}
 			</span>
-			<span class="weekInd">
-			<span class="weekPad" style="flex-grow:{{forloop.index0}}"></span>
+			<span class=weekInd>
+			<span class=weekPad style=flex-grow:{{forloop.index0}}></span>
 			{% assign begMonth = endMonth %}
 		{% endif %}
-		<span class="dayInd">{{beginningOfWeek | plus: add | date: "%e"}}</span>
+		<span class=dayInd>{{beginningOfWeek | plus: add | date: "%e"}}</span>
 	{% endfor %}
 	</span>
 	
 	</span>
-	</li>
 {% endfor %}
 </{% if include.ordered %}ol{% else %}ul{% endif %}>
 </div>

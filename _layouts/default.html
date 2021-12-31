@@ -2,32 +2,27 @@
 layout: compressxml
 ---
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8"/>
-<link rel="stylesheet" href="{% include rel u='/main.css' %}"/>
-<link rel="icon" href="{% include rel u='/img/fav.gif' %}"/>
+<html lang=en>
+<meta charset=utf-8>
+<link rel=stylesheet href="{% include rel u='/main.css' %}">
+<link rel=icon href="{% include rel u='/img/fav.gif' %}">
 <noscript><style>.yescript{display:none}</style></noscript>
 <title>Fillbert {% if layout.is_comic %}comic for {% include title post=page %}{% else %}| {{page.title}}{% endif %}</title>
 <script src="{% include rel u='/main.js' %}"></script>
-</head>
-<body>
-<header><nav class="skip"><a href="#main">Skip to content</a></nav>
+<header><nav class=skip><a href=#main>Skip to content</a></nav>
 {{site.title}} {{site.tagline}}<nav>
 <ul>
-<li><a href="{% include rel u='/' %}">Home</a></li>
-<li><a href="{% include rel u='/about' %}">About</a></li>
-<li><a href="{% include rel u='/archive' %}">Archive</a></li>
-<li><a href="{% include rel u='/tags' %}">Tag search</a></li>
-<li><a href="{% include rel u='/feeds' %}">Feeds</a></li>
-<li><a href="{% include rel u='/social' %}">Social</a></li>
-<li class="yescript"><button type="button" id="disableAnimations" onclick="invertStorageFromId(this)">Disable animations</button></li>
+<li><a href="{% include rel u='/' %}">Home</a>
+<li><a href="{% include rel u='/about' %}">About</a>
+<li><a href="{% include rel u='/archive' %}">Archive</a>
+<li><a href="{% include rel u='/tags' %}">Tag search</a>
+<li><a href="{% include rel u='/feeds' %}">Feeds</a>
+<li><a href="{% include rel u='/social' %}">Social</a>
+<li class=yescript><button type=button id=disableAnimations onclick=invertStorageFromId(this)>Disable animations</button>
 </ul></nav>
 </header>
-<main id="main">
+<main id=main>
 {{content}}
 </main>
-<footer>Fillbert © {{site.time|date:"%G"}} Vivi. <br/>Except where otherwise noted, Fillbert is licensed under a <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>
-</footer>
-</body>
-</html>
+<footer>Fillbert © {{site.time|date:"%G"}} Vivi.<br>Except where otherwise noted, Fillbert is licensed under a
+<a href=https://creativecommons.org/licenses/by-nc/4.0/>Creative Commons Attribution-NonCommercial 4.0 International License</a></footer>

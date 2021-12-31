@@ -13,7 +13,7 @@ Fabian: <span lang=de>Fabian</span>
 Choose a tag to see the comics with that tag.<br>
 <ul>
 {% for tag in tags %}
-<li><a href="#{{tag | xml_escape}}">{{page[tag]|default:tag}} ({{site.tags[tag].size}})</a></li>
+<li><a href="#{{tag | xml_escape}}">{{page[tag]|default:tag}} ({{site.tags[tag].size}})</a>
 {% endfor %}
 </ul>
 </nav>
