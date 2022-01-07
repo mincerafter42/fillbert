@@ -1,5 +1,12 @@
+---
+layout: none
+---
 function copy(text) {
 	navigator.clipboard.writeText(text);
+}
+
+function copyP(url) {
+	copy({{site.url|append:site.baseurl|jsonify}}+url);
 }
 
 function removeElementsWithTagName(tagName) {
