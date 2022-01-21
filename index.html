@@ -1,45 +1,61 @@
 ---
+layout: default
 title: Home
 ---
-<svg width="800" height="800" viewBox="0 0 800 800">
+<div id=blink style="padding:11px;filter:url(#bevel);background-color:#f33;display:flex;justify-content:center;flex-wrap:wrap;animation:3s steps(2,jump-none) infinite blink">
+<div style=color:#fff>
+ <h1 style="margin:8px 0;font-size:42pt;font-weight:normal">FILLBERT The Empty Space Cat!</h1>
+ <div style=font-size:25pt>The webcomic powered by Scalable Vector Graphics!</div>
+</div>
+<svg width="118" height="118">
  <defs>
   <filter id="bevel">
-   <feGaussianBlur in="SourceGraphic" result="result0" stdDeviation="4"/>
-   <feDiffuseLighting lighting-color="#fff" result="result5" surfaceScale="4">
-    <feDistantLight azimuth="235" elevation="45"/>
-   </feDiffuseLighting>
-   <feComposite in="result5" in2="SourceGraphic" k1="1.4" operator="arithmetic" result="fbSourceGraphic"/>
-   <feGaussianBlur in="fbSourceGraphic" result="result0" stdDeviation="4"/>
-   <feSpecularLighting lighting-color="#fff" in="result0" result="result1" specularExponent="25" surfaceScale="4">
+   <feGaussianBlur result="r0" stdDeviation="4"/>
+   <feSpecularLighting result="r1" specularExponent="25" surfaceScale="4">
     <feDistantLight azimuth="235" elevation="45"/>
    </feSpecularLighting>
-   <feComposite in="fbSourceGraphic" in2="result1" k2="1" k3="1" operator="arithmetic" result="result4"/>
-   <feComposite in="result4" in2="SourceGraphic" operator="in" result="result2"/>
+   <feMorphology in="r0" radius="8" result="r2"/>
+   <feDropShadow stdDeviation="0" dx="6" dy="6"/>
+   <feComposite in2="r1"/>
+   <feComposite in2="r2" operator="out"/>
+   <feComposite in2="SourceGraphic"/>
+   <feComposite in2="SourceGraphic" operator="in"/>
   </filter>
  </defs>
-  <rect width="800" height="140" fill="#00f" filter="url(#bevel)">
-  <animate attributeName="fill" repeatCount="indefinite" dur="3s" values="#00f;#f00" calcMode="discrete"/>
-  </rect>
- <rect y="140" width="800" height="60" fill="#ff0" filter="url(#bevel)"/>
-  <rect y="200" width="200" height="600" fill="#0f0" filter="url(#bevel)"/>
-  <rect x="200" y="200" width="600" height="600" fill="#f0f" filter="url(#bevel)"/>
- <g font-family="Vivi" letter-spacing="0" word-spacing="0">
- <g text-anchor="middle"><g fill="#fff">
-  <text x="400" y="62" font-size="42pt">FILLBERT The Empty Space Cat</text>
-  <text font-size="25pt" x="400" y="112">The webcomic powered by Scalable Vector Graphics!</text></g>
- <text x="400" y="178" font-size="28pt">Click the cat to go to the latest comic!</text>
- </g>
+ <a href="{% include rel u=site.posts.first.url %}" id="latest">
+ <path filter="url(#bevel)" d="m118 57.9-12.3 7.27 9.79 11-14 3.11 5.92 13.5-14.2-1.36 1.47 14.6-13.1-5.69-3.12 14.4-10.7-9.47-7.4 12.7-7.27-12.3-11 9.79-3.11-14-13.5 5.92 1.36-14.2-14.6 1.47 5.69-13.1-14.4-3.12 9.47-10.7-12.7-7.4 12.3-7.27-9.79-11 14-3.11-5.92-13.5 14.2 1.36-1.47-14.6 13.1 5.69 3.12-14.4 10.7 9.47 7.4-12.7 7.27 12.3 11-9.79 3.11 14 13.5-5.92-1.36 14.2 14.6-1.47-5.69 13.1 14.4 3.12-9.47 10.7z" fill="#ff4"/>
+ <text font-family="Vivi" font-size="20pt" text-anchor="middle" text-decoration="underline" aria-label="Latest comic"><tspan x="58.9" y="54.9">Latest</tspan><tspan x="58.9" y="81.6">comic!</tspan></text></a>
+</svg>
+</div>
+<script>if (window.localStorage.getItem("disableAnimations")=="true") document.getElementById("blink").style.animation=""</script>
+<div style=display:flex;color:#000;flex-wrap:wrap>
+<div style="background-color:#6f6;filter:url(#bevel);padding:11px;flex:1 1 200px">
+<i>Fillbert</i> contains:<br>
+ <ul id=features>
+  <li>Math!
  {% capture all %}{{site.posts}}{% endcapture %}
  {% assign allSizeKb = all.size|divided_by: 1000 %}
- <text font-size="14pt"><tspan x="9" y="230"><tspan font-style="italic">Fillbert</tspan> contains: </tspan><tspan x="9" y="270">Math! </tspan><tspan x="9" y="310">{% if allSizeKb < 1000 %}Over {{allSizeKb}}{% else %}{{allSizeKb}}+{% endif %} kilobytes of </tspan><tspan x="9" y="330">comics and counting! </tspan><tspan x="9" y="370">SVG SMIL animations! </tspan><tspan x="9" y="410">At least one </tspan><tspan x="9" y="430">allosexual character! </tspan><tspan x="9" y="470">ISO 8601 date and </tspan><tspan x="9" y="490">time formats! </tspan><tspan x="9" y="530">An above average </tspan><tspan x="9" y="550">amount of weirdness! </tspan><tspan x="9" y="590">Gay!! </tspan></text>
- </g>
- <a href="{% include rel u=site.posts.first.url %}">
-<image x="200" y="200" width="600" height="600" href="{% include rel u='/img/fillbert.svg'%}"/>
-</a>
-</svg>
-<p>
-Welcome to the web site of Fillbert, the cat that fills empty space! The site is being slowly filled with comics. Click the Fillbert above to go to <a href="{% include rel u=site.posts.first.url %}">the latest comic</a>.
-</p>
-<p>
-<i>Fillbert</i> contains <abbr title="Scalable Vector Graphics">SVG</abbr>\ <abbr title="Synchronized Multimedia Integration Language">SMIL</abbr> animations. <noscript>If your browser had JavaScript enabled, there would be an option to disable animations in the header navigation.</noscript><span class="yescript">You can enable or disable animations using the button in the header navigation.</span>
-</p>
+  <li>Over {{allSizeKb}} kilobytes of comics and counting!
+  <li><abbr title="Scalable Vector Graphics">SVG</abbr>\ <abbr title="Synchronized Multimedia Integration Language">SMIL</abbr> animations!
+  <li>At least one allosexual character!
+  <li>ISO 8601 date and time formats!
+  <li>An above average amount of weirdness!
+  <li>Gay!!
+ </ul>
+</div>
+<div style="background-color:#f6f;filter:url(#bevel);flex:2 1 auto">
+<a href="{% include rel u=site.posts.first.url %}"><img src="{% include rel u='/img/fillbert.svg'%}" style=max-width:100%;height:auto height=600 width=600 alt="Latest comic"></a>
+</div>
+</div>
+
+<style>
+#latest:hover text, #latest:focus text, #latest:active text {outline:thin solid #000}
+#features li {margin:15pt 0}
+@keyframes blink {
+ from {background-color:#f33}
+ to {background-color:#33f}
+}
+</style>
+
+<p>Welcome to the web site of Fillbert, the cat that fills empty space! The site is being slowly filled with comics.
+<p><noscript>If your browser had JavaScript enabled, there would be an option to disable animations in the header navigation.</noscript><span class=yescript>You can enable or disable animations using the button in the header navigation.</span>
