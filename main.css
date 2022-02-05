@@ -33,7 +33,7 @@ a:link, a:visited {
 button {
 	color: #0ff;
 }
-a:link, a:visited, button {
+a:link, button {
 	font: inherit;
 	background: none;
 	padding: 0;
@@ -55,8 +55,6 @@ svg {
 	max-width: 100%;
 	height: auto;
 }
-svg a:link, svg a:visited {text-decoration: none}
-svg a:hover, svg a:focus {text-decoration: underline}
 .dsc {
 	font-size: 0;
 }
