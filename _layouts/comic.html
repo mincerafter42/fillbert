@@ -6,5 +6,8 @@ is_comic: true
 <div id=comic>
 {{content}}
 </div>
-<nav><ul><li><a href="{% include rel u=site.posts.last.url %}" rel=first>First comic</a><li><a{% if page.previous %} href="{% include rel u=page.previous.url %}" rel=prev{%endif%}>Previous comic</a><li><noscript>Permalink: {{page.url|absolute_url}}</noscript><button class=yescript type=button onclick='copy("{{page.url|absolute_url}}")'>Copy permalink</button><li><a{% if page.next %} href="{% include rel u=page.next.url %}" rel=next{%endif%}>Next comic</a><li><a href="{% include rel u=site.posts.first.url %}" rel=last>Latest comic</a></ul></nav>
+<nav><ul><li><a href="{% include rel u=site.posts.last.url %}" rel=first>First comic</a>
+{% if page.arcs.size == 1 %}{% assign first= site.posts | where_exp: "post", "post.arcs contains page.arcs.first" | last %}{% if first != page %}<li><a href="{% include rel u=first.url %}">Start of this arc</a>{% endif %}{% endif %}
+<li><a{% if page.previous %} href="{% include rel u=page.previous.url %}" rel=prev{%endif%}>Previous comic</a><li><noscript>Permalink: {{page.url|absolute_url}}</noscript><button class=yescript type=button onclick='copy("{{page.url|absolute_url}}")'>Copy permalink</button><li><a{% if page.next %} href="{% include rel u=page.next.url %}" rel=next{%endif%}>Next comic</a><li><a href="{% include rel u=site.posts.first.url %}" rel=last>Latest comic</a></ul>
+</nav>
 {% if page.commentary %}<h2 id=commentary>Commentary</h2>{{page.commentary | markdownify}}{% endif %}
