@@ -51,10 +51,6 @@ a:focus {
 button:focus {
 	outline: thin solid #0ff;
 }
-svg {
-	max-width: 100%;
-	height: auto;
-}
 .dsc {
 	font-size: 0;
 }
