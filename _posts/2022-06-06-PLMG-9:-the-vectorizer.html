@@ -11,7 +11,11 @@ commentary: "Fillbert in the first 2 panels is supposed to be all pixelly becaus
 	<path d="m0 0h256v256h-256zm0 300h256v256h-256zm300-300h256v256h-256z" id="q"/>
 </mask>
   <path id="t" d="m93 36.3c4.82.217 9.82.331 15 .331 7.13 0 14-.221 21.5-.632m-95 11.5c0 8.35 32 15.1 72.5 15.1 26.5 0 49.7-3.06 63-7.6"/>
-
+<filter id="m">
+  <feImage width="2" height="2" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAIAAAD91JpzAAAAFElEQVQIHWNcsIDhAAMDC4hgYAAAGxgCxvxaziwAAAAASUVORK5CYII=" />
+  <feTile result="k"/>
+ <feDisplacementMap in="SourceGraphic" in2="k" xChannelSelector="R" yChannelSelector="G" scale="3"/>
+</filter>
 </defs>
 <g font-family="Vivi" font-size="17px" letter-spacing="0" word-spacing="0">
 <text x="-21" y="-5">Meanwhile, in late 2020...</text>
@@ -67,8 +71,7 @@ commentary: "Fillbert in the first 2 panels is supposed to be all pixelly becaus
  <path d="m381 168-.167 5.27-5.81-.69m-9.13-24.1 9.13 11.7-5.51-.317 11.3 13.4m19.8-106 5.27-.0819-.414 5.84m-23.6 10.3 11.3-9.68-.0559 5.52 12.8-11.9m-99.1-.825-.559-5.24 5.85-.116m12.3 22.6-10.7-10.3 5.5-.444-13-11.7" fill="none">
  <animate attributeName="stroke" values="#000;#ff0;#000" dur="1.8" repeatCount="indefinite"/>
  </path>
-
- <g shape-rendering="optimizeSpeed">
+ <g shape-rendering="optimizeSpeed" filter="url(#m)">
   <path d="m461 149c13.1 12 20.9-6.72 12.4-27.9-6.88-17.2 2.65-28.5 9.37-24.4m-391 70.1c-14.8 10.3-23.5-9.04-23-21.7.442-11.1-15.1-10.8-12.1 3.28" stroke-width="9"/>
 <g fill="#fff" stroke-width="3">
   <path d="m460 152c0 12.2-1.79 18.2-6.9 18.2-5.12.0963-6.31-5.44-6.71-10.9-1.51 11.1-11 11.3-11.8 4.01m-11.9-68.6-10.2-9.62-2.38 17.9m-8.3 24.8c-6.61-4.55-13.1-5.78-15.4-1.15-2.21 4.63 3.21 12.5 16.4 17.2m-263 27.7c.0884 6.1-1.37 14.8-6.58 15.1-5.21.265-7.42-5.48-8.04-12.7m-35.4-4.46c0 12.2 1.79 18.2 6.9 18.2 5.12.0963 6.31-5.44 6.71-10.9-2.81 11.5 12.1 9.51 7.75 2.16m10.3-71.2 6.19-10.5 7.24 17.2"/>
