@@ -2,7 +2,7 @@
 title: About
 ---
 <i>Fillbert</i> is a webcomic created by [me, Vivi](https://mincerafter42.github.io). It should work with browsers that fully support HTML![5](https://www.w3.org/html/logo/downloads/HTML5_Badge.svg){:height='20' width='20' style='vertical-align:text-bottom'}, [![CSS](https://www.w3.org/Style/CSS/Buttons/csso.svg){:height='22' width='62' style='vertical-align:text-bottom'}](//www.w3.org/Style/CSS/Buttons)3, and [![SVG](https://www.w3.org/Icons/SVG/Buttons/svg-w3c-blue.svg){:height='21' style='vertical-align:text-bottom'}](//www.w3.org/Graphics/SVG/)2.  
-The comics are published weekly.
+The comics are published sometimes.
 
 ## Tech
 
